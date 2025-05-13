@@ -1,0 +1,117 @@
+
+body {
+  height: 100svh;
+  background: #0d0d0d;
+  color: #fff;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.noise {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://media.giphy.com/media/oEI9uBYSzLpBK/giphy.gif');
+  background-size: cover;
+  opacity: 0.04;
+  pointer-events: none;
+}
+
+.overlay {
+  z-index: 1;
+  text-align: center;
+  padding: 2rem;
+}
+
+.glitch {
+  font-size: 8rem;
+  font-weight: bold;
+  position: relative;
+  color: var(--clr-primary-2);
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  color: var(--clr-primary-2-1);
+  background: var(--clr-primary-3);
+  clip: rect(0, 900px, 0, 0);
+}
+
+.glitch::before {
+  animation: glitchTop 2s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+  color: rgb(250, 23, 201);
+  animation: glitchBottom 1.5s infinite linear alternate-reverse;
+}
+
+@keyframes glitchTop {
+  0% {
+    clip: rect(0, 9999px, 0, 0);
+    transform: translate(0);
+  }
+  5% {
+    clip: rect(0, 9999px, 100px, 0);
+    transform: translate(-5px, -3px);
+  }
+  10% {
+    clip: rect(0, 9999px, 0, 0);
+    transform: translate(0);
+  }
+}
+
+@keyframes glitchBottom {
+  0% {
+    clip: rect(0, 9999px, 0, 0);
+    transform: translate(0);
+  }
+  5% {
+    clip: rect(0, 9999px, 100px, 0);
+    transform: translate(5px, 3px);
+  }
+  10% {
+    clip: rect(0, 9999px, 0, 0);
+    transform: translate(0);
+  }
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  color: var(--clr-font);
+}
+
+.description {
+  margin: 20px 0 40px 0;
+  color: var(--clr-font);
+  opacity: 0.6;
+
+}
+
+.glow-btn {
+  background-color: var(--clr-primary-2);
+  border: none;
+  padding: 15px 30px;
+  color: #000;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px var(--clr-primary-2-1);
+}
+
+.glow-btn:hover {
+  background-color: var(--clr-primary-2-1);
+  box-shadow: 0 0 25px --clr-primary-2-1;
+  transform: scale(1.05);
+}

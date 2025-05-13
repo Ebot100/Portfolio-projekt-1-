@@ -1,0 +1,134 @@
+.about-card-container {
+    perspective: 1500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    padding: 15px;
+    width: 100%;
+    flex-direction: column;
+    row-gap: 50px;
+    color: var(--clr-font);
+}
+
+.about-card {
+    margin: 0 auto;
+    padding: 2em;
+    width: 500px;
+    height: 650px;
+    background-color: var(--clr-primary-4);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--clr-font);
+    text-align: center;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.258);
+    transition: transform 0.1s ease-out;
+    transform-style: preserve-3d;
+    position: relative;
+    z-index: 1;
+    border: 1px solid var(--clr-primary-2-1);
+
+}
+
+.profile-picture {
+    width: 170px;
+    border-radius: 50%;
+    margin: 15px;
+    margin: 20px;
+    position: relative;
+    top: -10px;
+    object-fit: cover; 
+    transition: transform 0.3s ease-in-out; 
+    
+}
+
+.about-container{
+    height: 300px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border-radius: 15px;
+    opacity: 70%;
+    padding: 15px;
+}
+#changing-text{
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.spotify-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px; 
+    margin: 50px auto;
+}
+
+iframe {
+    transition: opacity 1.8s ease-in-out;
+    
+    
+}
+
+.my-socials{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0 100px 0;
+    flex-direction: column;
+    color: var(--clr-font);
+    row-gap: 50px;
+    perspective: 1500px;
+}
+
+
+.social{
+    width: 500px;
+    height: 200px;
+    border-radius: 12px;
+    background: linear-gradient(153deg, rgba(20,60,240,0.8309524493391106) 16%, rgba(141,18,217,0.8477591720281863) 33%, rgba(187,16,226,0.8561625333727241) 57%, rgba(223,129,0,0.875770376509979) 80%, rgba(189,182,7,0.7717647058823529) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.258);
+    transition: background 0.8s ease-in-out, opacity 0.5s ease-in-out;
+    transition: 0.5s ease;
+    &:hover{
+        opacity: 0.8;
+        box-shadow: 0px 6px 12px 0px var(--clr-primary-4);
+        transform: scale(97%);
+    }
+}
+.my-socials a{
+    transition: transform 0.1s ease-out;
+    transform-style: preserve-3d;
+}
+
+@keyframes borderColor {
+    0% {
+        border: 1px solid var(--clr-primary-2-1);
+    }
+
+    50% {
+        border: 1px solid var(--clr-primary-2);
+    }
+    100% {
+        border: 1px solid var(--clr-primary-2-1);
+    }
+}
+
+@media (max-width: 768px) {
+    .about-card{
+        width: 95%;
+    }
+    
+    .social{
+        width: 380px;
+    }
+}

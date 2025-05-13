@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zdjęcia z gier</title>
+    <link rel="stylesheet" href="gallery-style.css">
+    <link rel="stylesheet" href="../common-style.css">
+    <script src="gallery-script.js" defer></script>
+    <script src="../common-script.js" defer></script>
+    <link rel="icon" href="../favicon.ico" type="image/png">
+</head>
+
+<body>
+
+    <header>
+        <section class="left-header-section">
+            <button id="menu-toggle" class="menu-button"><img src="../Images/Icons/menu.png" alt="menu"></button>
+            <nav id="menu" class="menu-burger hidden">
+                <a href="../Homepage/index.html">Start</a>
+                <a href="../About/index.html">O mnie</a>
+                <a href="../Projects/index.html">Portfolio</a>
+                <a href="../Blog/index.php">Blog</a>
+            </nav>
+        </section>
+        <section class="middle-header-section">
+            <ul class="horizontal-list">
+                <li><a href="../Homepage/index.html">Start</a></li>
+                <li><a href="../About/index.html">O mnie</a></li>
+                <li><a href="../Projects/index.html">Portfolio</a></li>
+                <li><a href="../Blog/index.php">Blog</a></li>
+            </ul>
+        </section>
+
+        <section class="right-header-section">
+
+
+            <div class="theme-dropdown">
+                <button class="theme-dropdown-btn">Wybierz motyw</button>
+                <ul class="theme-dropdown-list">
+                    <li data-theme="default">Domyślny</li>
+                    <li data-theme="light">Jasny</li>
+                    <li data-theme="Midnight">Midnight</li>
+                </ul>
+            </div>
+
+        </section>
+    </header>
+    <main>
+
+
+        <section class="container">
+            <div class="gallery-wrapper">
+                <div class="gallery">
+                    <img src="../Images/gamesGallery/2025-3-28_21h39m46s_1920x1080.png" alt="image-1" loading="lazy">
+                    <img src="../Images/gamesGallery/2025-3-28_21h39m56s_1920x1080.png" alt="image-2" loading="lazy">
+                    <img src="../Images/gamesGallery/2025-3-28_21h40m15s_1920x1080.png" alt="image-3" loading="lazy">
+                    <img src="../Images/gamesGallery/2025-3-28_21h42m17s_1920x1080.png" alt="image-4" loading="lazy">
+                    <img src="../Images/gamesGallery/fh5-1.png" alt="image-5" loading="lazy">
+                    <img src="../Images/gamesGallery/fh5-2.png" alt="image-6" loading="lazy">
+                    <img src="../Images/gamesGallery/fh5-3.png" alt="image-7" loading="lazy">
+                    <img src="../Images/gamesGallery/fh1-1.png" alt="image-8" loading="lazy">
+                    <img src="../Images/gamesGallery/stray.png" alt="image-9" loading="lazy">
+                    <img src="../Images/gamesGallery/2025-01-24 225551.png" alt="image-10" loading="lazy">
+                    <img src="../Images/gamesGallery/2025-01-26 010535.png" alt="image-11" loading="lazy">
+                    <img src="../Images/gamesGallery/2025-02-16 153631.png" alt="image-12" loading="lazy">
+                    <img src="../Images/gamesGallery/2025-4-23_10h10m15s_1920x1080.png" alt="image-13" loading="lazy">
+                    <img src="../Images/gamesGallery/2025-4-23_10h20m1s_1920x1080.png" alt="image-14" loading="lazy">
+                    <img src="../Images/gamesGallery/2025-4-23_10h20m9s_1920x1080.png" alt="image-15" loading="lazy">
+                    <img src="../Images/gamesGallery/2025-4-23_10h21m37s_1920x1080.png" alt="image-16" loading="lazy">
+                    <img src="../Images/gamesGallery/2025-4-23_10h22m3s_1920x1080.png" alt="image-17" loading="lazy">
+                    <img src="../Images/gamesGallery/2025-4-23_10h9m52s_2560x1440.png" alt="image-18" loading="lazy">
+                </div>
+            </div>
+        </section>
+        <div class="lightbox" id="lightbox">
+            <span class="lightbox-prev">&#10094;</span>
+            <span class="lightbox-close">&times;</span>
+            <img src="" alt="">
+            <span class="lightbox-next">&#10095;</span>
+        </div>
+
+    </main>
+    <div id="loader">
+        <div class="spinner"></div>
+        <p>Ładowanie zdjęć...</p>
+    </div>
+
+
+</body>
+
+</html>

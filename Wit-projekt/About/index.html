@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O mnie</title>
+    <link rel="stylesheet" href="about-style.css">
+    <link rel="stylesheet" href="../common-style.css">
+    <script src="about-script.js" defer></script>
+    <script src="../common-script.js" defer></script>
+    <link rel="icon" href="../favicon.ico" type="image/png">
+</head>
+
+<body>
+    <header>
+        <section class="left-header-section">
+            <button id="menu-toggle" class="menu-button"><img src="../Images/Icons/menu.png" alt="menu"></button>
+            <nav id="menu" class="menu-burger hidden">
+                <a href="../Homepage/index.html">Start</a>
+                <a href="../About/index.html">O mnie</a>
+                <a href="../Projects/index.html">Portfolio</a>
+                <a href="../Blog/index.php">Blog</a>
+            </nav>
+        </section>
+        <section class="middle-header-section">
+            <ul class="horizontal-list">
+                <li><a href="../Homepage/index.html">Start</a></li>
+                <li><a href="../About/index.html">O mnie</a></li>
+                <li><a href="../Projects/index.html">Portfolio</a></li>
+                <li><a href="../Blog/index.php">Blog</a></li>
+            </ul>
+        </section>
+
+        <section class="right-header-section">
+
+
+            <div class="theme-dropdown">
+                <button class="theme-dropdown-btn">Wybierz motyw</button>
+                <ul class="theme-dropdown-list">
+                    <li data-theme="default">Domyślny</li>
+                    <li data-theme="light">Jasny</li>
+                    <li data-theme="Midnight">Midnight</li>
+                </ul>
+            </div>
+
+        </section>
+    </header>
+
+    <main>
+
+
+
+
+        <section class="about-card-container">
+            <h1>Trochę o mnie </h1>
+            <div class="about-card rotating">
+                <img src="../Images/Szymon-pfp.jpg" alt="pfp" class="profile-picture">
+                <div class="about-container">
+                    <p id="changing-text">Jestem początkującym web developerem, który uczy się technologii frontendowych i backendowych. Tworzę strony internetowe i aplikacje webowe, stale rozwijając swoje umiejętności.</p>
+                </div>
+                
+                    <div class="spotify-container">
+                        <iframe id="spotify-frame" style="border-radius:12px" 
+                            src="https://open.spotify.com/embed/track/2nLtzopw4rPReszdYBJU6h?utm_source=generator&theme=0" 
+                            width="100%" height="152" frameBorder="0" allowfullscreen="" 
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                
+
+            </div>
+
+        </section>
+
+        <section class="my-socials ">
+            <h1>Gdzie możesz mnie śledzić</h1>
+            <a id="social-link" href="https://instagram.com" target="_blank">
+                <div class="social">
+                    <img id="social-icon" src="../Images/Icons/instagram.svg" alt="Social Icon">
+                </div>
+            </a>
+        </section>
+        
+
+    </main>
+
+    <footer>
+        <div class="footer-container">
+
+
+            <div class="footer-section links">
+                <h2>Przydatne linki</h2>
+                <ul>
+                    <li><a href="../Homepage/index.html">Strona główna</a></li>
+                    <li><a href="../About/index.html">O mnie</a></li>
+                    <li><a href="../Projects/index.html">Projekty</a></li>
+                    <li><a href="../Blog/index.php">Blog</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section contact">
+                <h2>Kontakt</h2>
+                <ul>
+                    <li><a href="mailto:sz.kubiak@onet.eu">E-mail</a></li>
+                    <li><a href="tel:123456789">Nr telefonu</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h2>Obserwuj mnie</h2>
+                <div class="social-icons">
+                    <a href=""><img src="../Images/Icons/footer-icons/icons8-facebook-50.png" alt="fb"></a>
+                    <a href=""><img src="../Images/Icons/footer-icons/icons8-instagram-50.png" alt="instagram"></a>
+                    <a href=""><img src="../Images/Icons/footer-icons/icons8-github-50.png" alt="github"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>2025-2025 Szymon Kubiak</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zdjęcia te prawdziwe xd</title>
+    <link rel="stylesheet" href="gallery-style.css">
+    <link rel="stylesheet" href="../common-style.css">
+    <script src="gallery-script.js" defer></script>
+    <script src="../common-script.js" defer></script>
+    <link rel="icon" href="../favicon.ico" type="image/png">
+</head>
+
+<body>
+
+    <header>
+        <section class="left-header-section">
+            <button id="menu-toggle" class="menu-button"><img src="../Images/Icons/menu.png" alt="menu"></button>
+            <nav id="menu" class="menu-burger hidden">
+                <a href="../Homepage/index.html">Start</a>
+                <a href="../About/index.html">O mnie</a>
+                <a href="../Projects/index.html">Portfolio</a>
+                <a href="../Blog/index.php">Blog</a>
+            </nav>
+        </section>
+        <section class="middle-header-section">
+            <ul class="horizontal-list">
+                <li><a href="../Homepage/index.html">Start</a></li>
+                <li><a href="../About/index.html">O mnie</a></li>
+                <li><a href="../Projects/index.html">Portfolio</a></li>
+                <li><a href="../Blog/index.php">Blog</a></li>
+            </ul>
+        </section>
+
+        <section class="right-header-section">
+
+
+            <div class="theme-dropdown">
+                <button class="theme-dropdown-btn">Wybierz motyw</button>
+                <ul class="theme-dropdown-list">
+                    <li data-theme="default">Domyślny</li>
+                    <li data-theme="light">Jasny</li>
+                    <li data-theme="Midnight">Midnight</li>
+                </ul>
+            </div>
+
+        </section>
+    </header>
+    <main>
+
+
+        <section class="container">
+            <div class="gallery-wrapper">
+                <div class="gallery">
+                    <img src="../Images/rlGallery/20220802_122646.jpg" alt="image-1">
+                    <img src="../Images/rlGallery/20230801_202741.jpg" alt="image-2">
+                    <img src="../Images/rlGallery/20230802_195743.jpg" alt="image-3">
+                    <img src="../Images/rlGallery/20240729_202149.jpg" alt="image-4">
+                    <img src="../Images/rlGallery/20240803_174658.jpg" alt="image-5">
+                    <img src="../Images/rlGallery/20250217_173309.jpg" alt="image-6">
+                    <img src="../Images/rlGallery/PXL_20250308_151028513~2-EFFECTS.jpg" alt="image-7">
+                    <img src="../Images/rlGallery/PXL_20250309_145217263.MP~2.jpg" alt="image-8">
+                    <img src="../Images/rlGallery/PXL_20250309_154735256.MP~2-EFFECTS.jpg" alt="image-9">
+                    <img src="../Images/rlGallery/PXL_20250409_092359084.MP~2-EFFECTS.jpg" alt="image-10">
+                </div>
+            </div>
+        </section>
+        <div class="lightbox" id="lightbox">
+            <span class="lightbox-prev">&#10094;</span>
+            <span class="lightbox-close">&times;</span>
+            <img src="" alt="">
+            <span class="lightbox-next">&#10095;</span>
+        </div>
+
+    </main>
+    <div id="loader">
+        <div class="spinner"></div>
+        <p>Ładowanie zdjęć...</p>
+    </div>
+
+
+</body>
+
+</html>
