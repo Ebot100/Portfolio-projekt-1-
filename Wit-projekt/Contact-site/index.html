@@ -2,9 +2,23 @@
 <html lang="pl">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; connect-src 'self' http://localhost:* http://127.0.0.1:* https://wit-projekt.pl/;" />
+
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <meta name="description" content="Wit-projekt to moje portfolio :D" />
+    <meta name="keywords" content="Wit-projekt, web development, programming, projects, portfolio" />
+    <meta name="author" content="Szymon Kubiak" />
+    <meta property="og:title" content="Wit-projekt" />
+    <meta property="og:description" content="Wit-projekt to moje portfolio :D" />
+    <meta property="og:image" content="https://wit-projekt.ct8.pl/favicon.ico" />
+    <meta property="og:url" content="https://wit-projekt.pl/" />
+    <meta property="og:type" content="website" />
+    <title>Skontaktuj się</title>
     <link rel="stylesheet" href="../common-style.css">
     <link rel="stylesheet" href="contact-site-style.css">
     <link rel="icon" href="../favicon.ico" type="image/png">
@@ -46,16 +60,41 @@
 
         </section>
     </header>
-    <section class="contact-container">
-        
-        <form action="contact.php" method="POST" class="contact-form">
-            <h1>Skontaktuj się ze mną</h1>
-            <input type="text" name="name" placeholder="Twoje imię" required>
-            <input type="text" name="email" placeholder="Twój e-mail" required>
-            <textarea name="message" rows="5" placeholder="Wiadomość..." required></textarea>
-            <button type="submit">Wyślij wiadomość</button>
-        </form>
-    </section>
+    <main>
+        <section class="contact-container">
+            <form action="contact.php" method="POST" class="contact-form">
+                <h1>Skontaktuj się ze mną</h1>
+                <input type="text" name="name" placeholder="Twoje imię" required>
+                <input type="text" name="email" placeholder="Twój e-mail" required>
+                <div class="phone-wrapper">
+                    <input list="countries" name="prefix" class="prefix-input"  placeholder="+48" required>
+                    <datalist id="countries">
+                        <option value="+1 🇺🇸 USA">
+                        <option value="+44 🇬🇧 Wielka Brytania">
+                        <option value="+49 🇩🇪 Niemcy">
+                        <option value="+33 🇫🇷 Francja">
+                        <option value="+39 🇮🇹 Włochy">
+                        <option value="+48 🇵🇱 Polska">
+                        <option value="+420 🇨🇿 Czechy">
+                        <option value="+421 🇸🇰 Słowacja">
+                        <option value="+43 🇦🇹 Austria">
+                        <option value="+386 🇸🇮 Słowenia">
+                        <option value="+31 🇳🇱 Niderlandy">
+                        <option value="+34 🇪🇸 Hiszpania">
+                        <option value="+351 🇵🇹 Portugalia">
+                        <option value="+40 🇷🇴 Rumunia">
+                        <option value="+380 🇺🇦 Ukraina">
+                        <option value="+7 🇷🇺 Rosja">
+                        <option value="+90 🇹🇷 Turcja">
+                        <option value="+81 🇯🇵 Japonia">
+                    </datalist>
+                    <input type="tel" name="phone" class="phone-input" placeholder="123 456 789" pattern="[0-9]*" inputmode="numeric" required>
+                </div>
+                <textarea name="message" rows="5" placeholder="Wiadomość..." required></textarea>
+                <button type="submit">Wyślij wiadomość</button>
+            </form>
+        </section>
+    </main>
     <footer>
         <div class="footer-container">
 
@@ -63,10 +102,10 @@
             <div class="footer-section links">
                 <h2>Przydatne linki</h2>
                 <ul>
-                    <li><a href="../Homepage/index.html">Strona główna</a></li>
-                    <li><a href="../About/index.html">O mnie</a></li>
-                    <li><a href="../Projects/index.html">Projekty</a></li>
-                    <li><a href="../Blog/index.php">Blog</a></li>
+                    <li><a href="https://github.com/Ebot100/Portfolio-projekt-1-" target="_blank">Projekt na
+                            Githubie</a></li>
+                    <li><a href="https://www.figma.com/design/M0zqaAA1Gz6M7PrnAVrrNn/Wit-projekt?m=auto&t=Epjg0hbYXic02nRq-1"
+                            target="_blank">Projekt Figma</a></li>
                 </ul>
             </div>
 

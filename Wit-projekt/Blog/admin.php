@@ -12,9 +12,34 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
 <html lang="pl">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; connect-src 'self' http://localhost:* http://127.0.0.1:* https://wit-projekt.pl/;"
+    />
 
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+
+    <meta
+      name="description"
+      content="Wit-projekt to moje portfolio :D"
+    />
+    <meta
+      name="keywords"
+      content="Wit-projekt, web development, programming, projects, portfolio"
+    />
+    <meta name="author" content="Szymon Kubiak" />
+    <meta property="og:title" content="Wit-projekt" />
+    <meta
+      property="og:description"
+      content="Wit-projekt to moje portfolio :D"
+    />
+    <meta property="og:image" content="https://wit-projekt.ct8.pl/favicon.ico" />
+    <meta property="og:url" content="https://wit-projekt.pl/" />
+    <meta property="og:type" content="website" />
     <title>Admin - Dodaj Post</title>
     <link rel="stylesheet" href="admin-style.css">
     <link rel="stylesheet" href="../common-style.css">
@@ -23,41 +48,41 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
     <link rel="icon" href="../favicon.ico" type="image/png">
 </head>
 <header>
-        <section class="left-header-section">
-            <button id="menu-toggle" class="menu-button"><img src="../Images/Icons/menu.png" alt="menu"></button>
-            <nav id="menu" class="menu-burger hidden">
-                <a href="../Homepage/index.html">Start</a>
-                <a href="../About/index.html">O mnie</a>
-                <a href="../Projects/index.html">Portfolio</a>
-                <a href="../Blog/index.php">Blog</a>
-            </nav>
-        </section>
-        <section class="middle-header-section">
-            <ul class="horizontal-list">
-                <li><a href="../Homepage/index.html">Start</a></li>
-                <li><a href="../About/index.html">O mnie</a></li>
-                <li><a href="../Projects/index.html">Portfolio</a></li>
-                <li><a href="../Blog/index.php">Blog</a></li>
+    <section class="left-header-section">
+        <button id="menu-toggle" class="menu-button"><img src="../Images/Icons/menu.png" alt="menu"></button>
+        <nav id="menu" class="menu-burger hidden">
+            <a href="../Homepage/index.html">Start</a>
+            <a href="../About/index.html">O mnie</a>
+            <a href="../Projects/index.html">Portfolio</a>
+            <a href="../Blog/index.php">Blog</a>
+        </nav>
+    </section>
+    <section class="middle-header-section">
+        <ul class="horizontal-list">
+            <li><a href="../Homepage/index.html">Start</a></li>
+            <li><a href="../About/index.html">O mnie</a></li>
+            <li><a href="../Projects/index.html">Portfolio</a></li>
+            <li><a href="../Blog/index.php">Blog</a></li>
+        </ul>
+    </section>
+
+    <section class="right-header-section">
+
+
+        <div class="theme-dropdown">
+            <button class="theme-dropdown-btn">Wybierz motyw</button>
+            <ul class="theme-dropdown-list">
+                <li data-theme="default">Domyślny</li>
+                <li data-theme="light">Jasny</li>
+                <li data-theme="Midnight">Midnight</li>
             </ul>
-        </section>
+        </div>
 
-        <section class="right-header-section">
-
-
-            <div class="theme-dropdown">
-                <button class="theme-dropdown-btn">Wybierz motyw</button>
-                <ul class="theme-dropdown-list">
-                    <li data-theme="default">Domyślny</li>
-                    <li data-theme="light">Jasny</li>
-                    <li data-theme="Midnight">Midnight</li>
-                </ul>
-            </div>
-
-        </section>
-    </header>
+    </section>
+</header>
 
 <body>
-<main>
+    <main>
         <h1>Dodaj Nowy Post</h1>
         <form action="save_post.php" method="POST" id="post-form">
             <label>Tytuł:</label><br>
@@ -99,10 +124,10 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
             <div class="footer-section links">
                 <h2>Przydatne linki</h2>
                 <ul>
-                    <li><a href="../Homepage/index.html">Strona główna</a></li>
-                    <li><a href="../About/index.html">O mnie</a></li>
-                    <li><a href="../Projects/index.html">Projekty</a></li>
-                    <li><a href="../Blog/index.php">Blog</a></li>
+                    <li><a href="https://github.com/Ebot100/Portfolio-projekt-1-" target="_blank">Projekt na
+                            Githubie</a></li>
+                    <li><a href="https://www.figma.com/design/M0zqaAA1Gz6M7PrnAVrrNn/Wit-projekt?m=auto&t=Epjg0hbYXic02nRq-1"
+                            target="_blank">Projekt Figma</a></li>
                 </ul>
             </div>
 

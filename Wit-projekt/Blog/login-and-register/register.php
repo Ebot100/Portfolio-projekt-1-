@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rejestracja</title>
-    <link rel="stylesheet" href="login&register-style.css">
+    <link rel="stylesheet" href="login-and-register-style.css">
     <link rel="stylesheet" href="../../common-style.css">
     <script src="check-pass.js"></script>
     <link rel="icon" href="../favicon.ico" type="image/png">

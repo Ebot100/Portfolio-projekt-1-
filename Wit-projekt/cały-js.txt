@@ -1,25 +1,70 @@
-const cards = document.querySelectorAll('.rotating'); 
+- 🏠 Strona Główna: 
+
+const canvas = document.getElementById('admin-canvas');
+const ctx = canvas.getContext('2d');
+
+canvas.width = 500;
+canvas.height = 340;
+
+const data = [37.6, 28.6, 17, 16.8];
+const labels = ['CSS', 'HTML', 'PHP', 'Js'];
+
+const barWidth = 50;
+const gap = 40;
+const maxData = Math.max(...data);
+const chartHeight = canvas.height - 40;
+
+ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+ctx.beginPath();
+ctx.moveTo(50, 10);
+ctx.lineTo(50, chartHeight);
+ctx.strokeStyle = '#ffffff';
+ctx.lineWidth = 2;
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(50, chartHeight);
+ctx.lineTo(canvas.width - 10, chartHeight);
+ctx.stroke();
+
+data.forEach((value, index) => {
+  const x = 50 + gap + index * (barWidth + gap);
+  const y = chartHeight - (value / maxData) * (chartHeight - 20);
+  const height = (value / maxData) * (chartHeight - 20);
+
+  ctx.fillStyle = 'rgba(58, 110, 255, 0.8)';
+  ctx.fillRect(x, y, barWidth, height);
+
+  ctx.fillStyle = '#ffffff';
+  ctx.font = '13px Comfortaa';
+  ctx.fillText(value, x + barWidth / 4, y - 10);
+
+  ctx.fillText(labels[index], x + barWidth / 4, chartHeight + 20);
+});
+
+- 👤 O mnie: 
+
+const card = document.querySelector('.rotating');
 
 const MAX_ROTATE_X = 12; 
 const MAX_ROTATE_Y = 5; 
 
 document.addEventListener('mousemove', (e) => {
-    cards.forEach(card => {
-        const cardRect = card.getBoundingClientRect();
-        const cardCenterX = cardRect.left + cardRect.width / 2;
-        const cardCenterY = cardRect.top + cardRect.height / 2;
+    const cardRect = card.getBoundingClientRect();
+    const cardCenterX = cardRect.left + cardRect.width / 2;
+    const cardCenterY = cardRect.top + cardRect.height / 2;
 
-        const deltaX = e.clientX - cardCenterX;
-        const deltaY = e.clientY - cardCenterY;
+    const deltaX = e.clientX - cardCenterX;
+    const deltaY = e.clientY - cardCenterY;
 
-        let rotateX = -(deltaY / cardRect.width) * MAX_ROTATE_X;
-        let rotateY = (deltaX / cardRect.height) * MAX_ROTATE_Y;
+    let rotateX = -(deltaY / cardRect.width) * MAX_ROTATE_X;
+    let rotateY = (deltaX / cardRect.height) * MAX_ROTATE_Y;
 
-        rotateX = Math.max(Math.min(rotateX, MAX_ROTATE_X), -MAX_ROTATE_X);
-        rotateY = Math.max(Math.min(rotateY, MAX_ROTATE_Y), -MAX_ROTATE_Y);
+    rotateX = Math.max(Math.min(rotateX, MAX_ROTATE_X), -MAX_ROTATE_X);
+    rotateY = Math.max(Math.min(rotateY, MAX_ROTATE_Y), -MAX_ROTATE_Y);
 
-        card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`; 
-    });
+    card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`; 
 });
 
 /*zmienianie opisow*/ 
@@ -66,19 +111,19 @@ setInterval(changeTrack, 5000);
 
 const socials = [
     {
-        link: "https://instagram.com",
+        link: "https://github.com/Ebot100",
         icon: "../Images/Icons/instagram.svg",
-        color: "linear-gradient(153deg, rgba(20,60,240,0.8309524493391106) 16%, rgba(141,18,217,0.8477591720281863) 33%, rgba(187,16,226,0.8561625333727241) 57%, rgba(223,129,0,0.875770376509979) 80%, rgba(189,182,7,0.7717647058823529) 100%)"
+        color: "linear-gradient(153deg, rgba(20,60,240,0.83) 16%, rgba(141,18,217,0.85) 33%, rgba(187,16,226,0.86) 57%, rgba(223,129,0,0.88) 80%, rgba(189,182,7,0.77) 100%)"
     },
     {
         link: "https://github.com",
         icon: "../Images/Icons/github.svg",
-        color: "linear-gradient(153deg, rgba(45,45,45,0.8309524493391106) 17%, rgba(52,50,50,1) 76%, rgba(36,79,91,0.6796919451374299) 100%)"
+        color: "linear-gradient(153deg, rgba(45,45,45,0.83) 17%, rgba(52,50,50,1) 76%, rgba(36,79,91,0.68) 100%)"
     },
     {
         link: "https://facebook.com",
         icon: "../Images/Icons/facebook.svg",
-        color: "linear-gradient(153deg, rgba(20,60,240,0.8309524493391106) 16%, rgba(7,150,189,0.7717647058823529) 85%)"
+        color: "linear-gradient(153deg, rgba(20,60,240,0.83) 16%, rgba(7,150,189,0.77) 85%)"
     },
     {
         link: "https://linkedin.com",
@@ -100,124 +145,38 @@ function changeSocial() {
 
 setInterval(changeSocial, 5000);
 
+- 📨 Kontakt: 
 
------
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector(".contact-form");
+    const emailInput = form.querySelector("input[name='email']");
 
-document.addEventListener("DOMContentLoaded", () => {
-    const form = document.querySelector("form");
-    const passwordInput = document.querySelector("input[name='password']");
-    const submitButton = form.querySelector("button[type='submit']");
+    const errorMsg = document.createElement("div");
+    errorMsg.style.color = "red";
+    errorMsg.style.fontSize = "14px";
+    errorMsg.style.margin = "10px";
+    emailInput.after(errorMsg);
 
-    const errorBox = document.createElement("div");
-    errorBox.style.color = "red";
-    errorBox.style.marginTop = "10px";
-    form.insertBefore(errorBox, submitButton);
+    form.addEventListener("submit", function (e) {
+        const email = emailInput.value.trim();
+        errorMsg.textContent = "";
 
-    function validatePassword(password) {
-        const errors = [];
-
-        if (password.length < 8 || password.length > 24) {
-            errors.push("Hasło musi mieć od 8 do 24 znaków.");
-        }
-        if (!/[A-Z]/.test(password)) {
-            errors.push("Hasło musi zawierać wielką literę.");
-        }
-        if (!/[a-z]/.test(password)) {
-            errors.push("Hasło musi zawierać małą literę.");
-        }
-        if (!/[0-9]/.test(password)) {
-            errors.push("Hasło musi zawierać cyfrę.");
-        }
-        if (!/[\W_]/.test(password)) {
-            errors.push("Hasło musi zawierać znak specjalny.");
-        }
-
-        return errors;
-    }
-
-    form.addEventListener("submit", (e) => {
-        const password = passwordInput.value;
-        const errors = validatePassword(password);
-
-        if (errors.length > 0) {
+        if (!email.includes("@")) {
             e.preventDefault();
-            errorBox.innerHTML = errors.join("<br>");
-        } else {
-            errorBox.innerHTML = "";
+            errorMsg.textContent = "Adres e-mail musi zawierać znak @";
+            return;
+        }
+
+        const domain = email.split("@")[1];
+        if (!domain || !domain.includes(".")) {
+            e.preventDefault();
+            errorMsg.textContent = "Adres e-mail musi zawierać poprawną domenę (np. gmail.com)";
+            return;
         }
     });
 });
 
-
------
-
-
-document.addEventListener('DOMContentLoaded', function () {
-    const modal = document.getElementById('myModal');
-    const modalTitle = document.getElementById('modal-title');
-    const modalContent = document.getElementById('modal-content');
-    const closeModal = document.querySelector('.close');
-
-    const posts = document.querySelectorAll('.post');
-    posts.forEach(post => {
-        post.addEventListener('click', function () {
-            const title = post.getAttribute('data-title');
-            const content = post.getAttribute('data-content');
-
-            modalTitle.textContent = title;
-            modalContent.textContent = content;
-
-            modal.style.display = 'block';
-        });
-    });
-
-    closeModal.addEventListener('click', function () {
-        modal.style.display = 'none';
-    });
-
-    window.addEventListener('click', function (event) {
-        if (event.target === modal) {
-            modal.style.display = 'none';
-        }
-    });
-});
------
-
-const images = document.querySelectorAll('.gallery img');
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = lightbox.querySelector('img');
-const lightboxClose = document.querySelector('.lightbox-close');
-const lightboxPrev = document.querySelector('.lightbox-prev');
-const lightboxNext = document.querySelector('.lightbox-next');
-
-let currentIndex = 0;
-
-images.forEach((img, index) => {
-    img.addEventListener('click', () => {
-        currentIndex = index;
-        showImage(currentIndex);
-    });
-});
-
-function showImage(index) {
-    lightboxImg.src = images[index].src;
-    lightbox.classList.add('active');
-}
-
-lightboxClose.addEventListener('click', () => {
-    lightbox.classList.remove('active');
-});
-
-lightboxPrev.addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + images.length) % images.length;
-    showImage(currentIndex);
-});
-
-lightboxNext.addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % images.length;
-    showImage(currentIndex);
-});
--------
+- 📁 Portfolio: 
 
 /* obsluga guziczkow przewijania i dotyku*/
 
@@ -282,5 +241,219 @@ document.querySelectorAll(".go-to-project").forEach(button => {
     });
 });
 
+- 🖼 Galerie:
+
+const images = document.querySelectorAll('.gallery img');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = lightbox.querySelector('img');
+const lightboxClose = document.querySelector('.lightbox-close');
+const lightboxPrev = document.querySelector('.lightbox-prev');
+const lightboxNext = document.querySelector('.lightbox-next');
+
+let currentIndex = 0;
+
+images.forEach((img, index) => {
+    img.addEventListener('click', () => {
+        currentIndex = index;
+        showImage(currentIndex);
+    });
+});
+
+function showImage(index) {
+    lightboxImg.src = images[index].src;
+    lightbox.classList.add('active');
+}
+
+lightboxClose.addEventListener('click', () => {
+    lightbox.classList.remove('active');
+});
+
+lightboxPrev.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage(currentIndex);
+});
+
+lightboxNext.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    showImage(currentIndex);
+});
 
 
+
+document.addEventListener("DOMContentLoaded", () => {
+    const loader = document.getElementById("loader");
+    const images = document.querySelectorAll(".gallery img");
+    let loadedCount = 0;
+
+    images.forEach((img) => {
+        if (img.complete) {
+            loadedCount++;
+        } else {
+            img.addEventListener("load", () => {
+                loadedCount++;
+                checkAllLoaded();
+            });
+            img.addEventListener("error", () => {
+                loadedCount++;
+                checkAllLoaded();
+            });
+        }
+    });
+
+    function checkAllLoaded() {
+        if (loadedCount === images.length) {
+            loader.style.opacity = "0";
+            setTimeout(() => loader.style.display = "none", 500);
+        }
+    }
+
+    if (loadedCount === images.length) {
+        checkAllLoaded();
+    }
+});
+
+- 📝 Blog: 
+
+document.addEventListener('DOMContentLoaded', function () {
+    const modal = document.getElementById('myModal');
+    const modalTitle = document.getElementById('modal-title');
+    const modalContent = document.getElementById('modal-content');
+    const closeModal = document.querySelector('.close');
+
+    const posts = document.querySelectorAll('.post');
+    posts.forEach(post => {
+        post.addEventListener('click', function () {
+            const title = post.getAttribute('data-title');
+            const content = post.getAttribute('data-content');
+
+            modalTitle.textContent = title;
+            modalContent.textContent = content;
+
+            modal.style.display = 'block';
+        });
+    });
+
+    closeModal.addEventListener('click', function () {
+        modal.style.display = 'none';
+    });
+
+    window.addEventListener('click', function (event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+});
+
+- 🔒 Logowanie: 
+
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.querySelector("form");
+    const passwordInput = document.querySelector("input[name='password']");
+    const submitButton = form.querySelector("button[type='submit']");
+
+    const errorBox = document.createElement("div");
+    errorBox.style.color = "red";
+    errorBox.style.marginTop = "10px";
+    form.insertBefore(errorBox, submitButton);
+
+    function validatePassword(password) {
+        const errors = [];
+
+        if (password.length < 8 || password.length > 24) {
+            errors.push("Hasło musi mieć od 8 do 24 znaków.");
+        }
+        if (!/[A-Z]/.test(password)) {
+            errors.push("Hasło musi zawierać wielką literę.");
+        }
+        if (!/[a-z]/.test(password)) {
+            errors.push("Hasło musi zawierać małą literę.");
+        }
+        if (!/[0-9]/.test(password)) {
+            errors.push("Hasło musi zawierać cyfrę.");
+        }
+        if (!/[\W_]/.test(password)) {
+            errors.push("Hasło musi zawierać znak specjalny.");
+        }
+
+        return errors;
+    }
+
+    form.addEventListener("submit", (e) => {
+        const password = passwordInput.value;
+        const errors = validatePassword(password);
+
+        if (errors.length > 0) {
+            e.preventDefault();
+            errorBox.innerHTML = errors.join("<br>");
+        } else {
+            errorBox.innerHTML = "";
+        }
+    });
+});
+
+
+- Brakujace rzeczy
+
+// 5 metod pobierania elementów + console.log
+console.log(document.getElementById("main-heading"));
+console.log(document.getElementsByTagName("li"));
+console.log(document.getElementsByClassName("highlight"));
+console.log(document.querySelector("#skills-list"));
+console.log(document.querySelectorAll("#skills-list li"));
+
+// zmiana tekstu 2. i 3. elementu listy
+const listItems = document.querySelectorAll("#skills-list li");
+if (listItems[1]) listItems[1].textContent = "CSS3";
+if (listItems[2]) listItems[2].textContent = "JavaScript";
+//  zmiana nagłówka na paragraf z pogrubieniem
+const h2 = document.getElementById("main-heading");
+const newP = document.createElement("p");
+newP.innerHTML = "<strong>" + h2.textContent + "</strong>";
+h2.replaceWith(newP);
+
+// dodawanie i usuwanie elementu listy
+document.getElementById("add-item").addEventListener("click", () => {
+    const li = document.createElement("li");
+    li.textContent = "Nowa umiejętność";
+    document.getElementById("skills-list").appendChild(li);
+});
+
+document.getElementById("remove-item").addEventListener("click", () => {
+    const list = document.getElementById("skills-list");
+    if (list.lastElementChild) list.removeChild(list.lastElementChild);
+});
+
+// zdarzenie z klawiatury
+document.addEventListener("keydown", (e) => {
+    console.log("Naciśnięto:", e.key);
+});
+
+// formularz obliczający wiek
+document.getElementById("age-form").addEventListener("submit", (e) => {
+    e.preventDefault();
+    const year = document.getElementById("birth-year").value;
+    const result = document.getElementById("age-result");
+    const currentYear = new Date().getFullYear();
+    if (year && year > 1900 && year <= currentYear) {
+        result.textContent = "Masz około " + (currentYear - year) + " lat.";
+    } else {
+        result.textContent = "Podaj poprawny rok.";
+    }
+});
+
+// obsługa zdarzen
+const agreeCheckbox = document.getElementById("agree");
+const sendBtn = document.getElementById("send-btn");
+
+agreeCheckbox.addEventListener("change", () => {
+    sendBtn.disabled = !agreeCheckbox.checked;
+});
+
+const feedback = document.getElementById("feedback");
+feedback.addEventListener("input", () => {
+    if (feedback.value.length < 10) {
+        feedback.style.border = "2px solid red";
+    } else {
+        feedback.style.border = "2px solid green";
+    }
+});

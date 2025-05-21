@@ -11,12 +11,14 @@ Wit-Projekt to responsywna strona internetowa stworzona w celach edukacyjnych. P
   - [📋 Opis Projektu](#-opis-projektu)
   - [🌐 Podstrony](#-podstrony)
   - [🛠 Technologie](#-technologie)
+  - [💼 Struktura folderów](#-struktura-folderów)
   - [🎨 Kolory i Czcionki](#-kolory-i-czcionki)
     - [Kolory](#kolory)
     - [Czcionki](#czcionki)
   - [🚀 Uruchomienie](#-uruchomienie)
   - [📧 Kontakt](#-kontakt)
   - [#️⃣ Przyciski](#️⃣-przyciski)
+  - [📝 Prompty do AI](#-prompty-do-ai)
 
 ---
 
@@ -45,10 +47,29 @@ Wit-Projekt to strona internetowa, która prezentuje portfolio, blog oraz galeri
 - **🌐 HTML5**: Struktura strony.
 - **🎨 CSS3**: Stylizacja, animacje, responsywność.
 - **⚙️ JavaScript**: Interaktywność, dynamiczne elementy.
-- **💾 LocalStorage**: Zapisywanie preferencji użytkownika (np. motyw kolorystyczny).
+- **💾 PHP**: Obsługa formularzy, logowania/rejestracji, dodawanie i zapisywanie postów.
 
 ---
-
+## 💼 Struktura folderów
+```
+├───404-page
+├───About
+│   └───Game-covers
+├───Blog
+│   ├───login-and-register
+│   └───posts
+├───Contact-site
+├───Gallery-gaming
+├───Gallery-real-photo
+├───Homepage
+├───Images
+│   ├───gamesGallery
+│   ├───Icons
+│   │   └───footer-icons
+│   └───rlGallery
+└───Projects
+``` 
+---
 ## 🎨 Kolory i Czcionki
 
 ### Kolory
@@ -56,10 +77,12 @@ Wit-Projekt to strona internetowa, która prezentuje portfolio, blog oraz galeri
 - **🎨 Główne**:
   - `--clr-primary`: #1c1c1c
   - `--clr-primary-2`: #4579d2
-  - `--clr-primary-2-1`: #6fc7f4;
+  - `--clr-primary-2-1`: #6fc7f4
   - `--clr-primary-3`: #141516
   - `--clr-primary-4`: #222529
   - `--clr-font`: #ffffff
+  
+![Paleta_kolorów](Markdown-images/Paletka.png)
 - **🌈 Motywy**:
   - Jasny: Zmiana na jaśniejsze odcienie.
   - Midnight: Fioletowe i niebieskie odcienie.
@@ -67,7 +90,7 @@ Wit-Projekt to strona internetowa, która prezentuje portfolio, blog oraz galeri
 ### Czcionki
 
 - **🖋 Comfortaa**: Używana w całym projekcie, zapewnia nowoczesny i czytelny wygląd.
-
+- **🖋 Wingdings**: Używana tylko w pewnej sytuacji...
 ---
 
 ## 🚀 Uruchomienie
@@ -120,4 +143,14 @@ Jeśli masz pytania lub sugestie, skontaktuj się ze mną przez maila, lub przez
  **🔒 Logowanie**: 
   ![Zrzut ekranu](Markdown-images/Firefox_Screenshot_2025-05-13T15-16-56.557Z.png)
   1: Pola służące do wprowadzania danych kolejno: loginu i hasła do panelu admina na stronie
-  2: Przycisk służący do zaakcpetowania danych i zalogowania do konta admina 
+  2: Przycisk służący do zaakcpetowania danych i zalogowania do konta admina   
+ **🐸 Nagłówek**:
+  ![Zrzut ekranu](Markdown-images/header.png)  
+  1: Łącza te służą do przechodzenia na opisane w nich podstrony  
+  2: Przycisk ten po naciśnięciu pokazuje wszystkie motywy do wyboru na stronie  
+
+## 📝 Prompty do AI  
+- Wygeneruj mi minimalistyczny favicon do projektu nt. portfolio, technologii itd.
+- Jak moge ograniczyc obrot tej karty (Chodzi o kartę na podstronie "O mnie")
+- Pomóż napisać zapis do pliku txt w PHP
+- Napraw działąnie funckji mail() w PHP
