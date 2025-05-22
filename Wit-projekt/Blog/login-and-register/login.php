@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <title>Logowanie</title>
     <link rel="stylesheet" href="../../common-style.css">
     <link rel="stylesheet" href="login-and-register-style.css">
-    <link rel="icon" href="../favicon.ico" type="image/png">
+    <link rel="icon" href="../../favicon.ico" type="image/png">
 </head>
 <body>
     <section class="login-form-section">

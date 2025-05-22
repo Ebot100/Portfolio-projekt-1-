@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="login-and-register-style.css">
     <link rel="stylesheet" href="../../common-style.css">
     <script src="check-pass.js"></script>
-    <link rel="icon" href="../favicon.ico" type="image/png">
+    <link rel="icon" href="../../favicon.ico" type="image/png">
 </head>
 
 <body>

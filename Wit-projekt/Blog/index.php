@@ -10,12 +10,6 @@ rsort($posts);
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; connect-src 'self' http://localhost:* http://127.0.0.1:* https://wit-projekt.pl/;"
-    />
-
-    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
     <meta
       name="description"
@@ -75,7 +69,7 @@ rsort($posts);
     </header>
 
     <main>
-        <a href="login-and-register/login.php" class="go-to-login"><img src="../images/login.png" alt="login"></a>
+        <a href="login-and-register/login.php" class="go-to-login"><span>&#10095;</span></a>
         <h1>Posty</h1>
         <?php foreach ($posts as $post):
             $lines = file($post);

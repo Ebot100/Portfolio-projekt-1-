@@ -134,15 +134,15 @@ Jeśli masz pytania lub sugestie, skontaktuj się ze mną przez maila, lub przez
  **🖼 Galerie**:
   ![Zrzut ekranu](Markdown-images/Zdjęcia%20te%20prawdziwe.png)
   1: Naciśniecie zdjęcia spowoduje wyświetlenie się jego powiękosznej wersji na ekranie  
-
- **📝 Blog**: 
-  ![Zrzut ekranu](Markdown-images/Firefox_Screenshot_2025-05-13T15-14-22.796Z.png)
-  1: Przycisk ten służy do przejscia na stronę [Logowania](#-podstrony)  
-  2: Naciśnięcie posta spowoduje wyświetlenie się jego pełnej wersji w większym okienku
+  
+ **📝 Blog**:   
+  ![Zrzut ekranu](Markdown-images/Firefox_Screenshot_2025-05-13T15-14-22.796Z.png)  
+  1: Przycisk ten służy do przejscia na stronę [Logowania](#-podstrony)    
+  2: Naciśnięcie posta spowoduje wyświetlenie się jego pełnej wersji w większym okienku  
 
  **🔒 Logowanie**: 
   ![Zrzut ekranu](Markdown-images/Firefox_Screenshot_2025-05-13T15-16-56.557Z.png)
-  1: Pola służące do wprowadzania danych kolejno: loginu i hasła do panelu admina na stronie
+  1: Pola służące do wprowadzania danych kolejno: loginu i hasła do panelu admina na stronie  
   2: Przycisk służący do zaakcpetowania danych i zalogowania do konta admina   
  **🐸 Nagłówek**:
   ![Zrzut ekranu](Markdown-images/header.png)  
@@ -154,3 +154,5 @@ Jeśli masz pytania lub sugestie, skontaktuj się ze mną przez maila, lub przez
 - Jak moge ograniczyc obrot tej karty (Chodzi o kartę na podstronie "O mnie")
 - Pomóż napisać zapis do pliku txt w PHP
 - Napraw działąnie funckji mail() w PHP
+- Dodaj możliwość usuwania postów z panelu administratora.
+- Wygeneruj mi losowe posty na stronę
