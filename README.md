@@ -144,6 +144,7 @@ Jeśli masz pytania lub sugestie, skontaktuj się ze mną przez maila, lub przez
   ![Zrzut ekranu](Markdown-images/Firefox_Screenshot_2025-05-13T15-16-56.557Z.png)
   1: Pola służące do wprowadzania danych kolejno: loginu i hasła do panelu admina na stronie  
   2: Przycisk służący do zaakcpetowania danych i zalogowania do konta admina   
+
  **🐸 Nagłówek**:
   ![Zrzut ekranu](Markdown-images/header.png)  
   1: Łącza te służą do przechodzenia na opisane w nich podstrony  
